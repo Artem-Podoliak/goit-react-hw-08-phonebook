@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 
-import { getFilterValue } from 'redux/filter/slice';
+import { getFilterValue } from './../../redux/filter/filter-selectors';
 import { useGetAllContactsQuery } from './../../redux/services/phoneBookApi';
 import sortContactsByName from 'utils/sortContactsByName';
 import ContactItem from 'components/ContactItem';
@@ -50,12 +50,7 @@ export default function ContactList() {
         {visibleContacts.length ? (
           visibleContacts.map(({ id, name, phone }) => (
             <li className={css.listElement} key={id}>
-              <ContactItem
-                id={id}
-                name={name}
-                phone={phone}
-                // onDelete={useDeleteContactMutation}
-              />
+              <ContactItem id={id} name={name} phone={phone} />
             </li>
           ))
         ) : (

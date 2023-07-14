@@ -1,0 +1,19 @@
+.appBar {
+  top: 0;
+  left: 0;
+  position: sticky;
+  z-index: 1100;
+  min-height: 64px;
+  padding-right: 48px;
+  padding-left: 48px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  display: flex;
+  align-items: center;
+
+  background: #a18c64;
+  box-shadow: 4px 4px 4px 0px rgba(130, 60, 43, 0.75);
+  -webkit-box-shadow: 4px 4px 4px 0px rgba(130, 60, 43, 0.75);
+  -moz-box-shadow: 4px 4px 4px 0px rgba(130, 60, 43, 0.75);
+}

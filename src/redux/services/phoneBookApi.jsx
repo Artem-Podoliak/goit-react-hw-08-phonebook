@@ -4,7 +4,16 @@ export const phoneBookApi = createApi({
   reducerPath: 'phoneBookApi',
 
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://64a6652f096b3f0fcc7fadd0.mockapi.io',
+    baseUrl: 'https://connections-api.herokuapp.com',
+    prepareHeaders: (headers, { getState }) => {
+      const token = getState().auth.token;
+
+      if (token) {
+        headers.set('authorization', `Bearer ${token}`);
+      }
+
+      return headers;
+    },
   }),
 
   tagTypes: ['Contact'],

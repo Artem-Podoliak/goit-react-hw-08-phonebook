@@ -1,0 +1,38 @@
+.notFoundWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notFoundMessage {
+  margin-top: 180px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.linkButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 50px;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 0px;
+  border-radius: 20px;
+  background-color: #a18c64;
+  color: #e2d5cc;
+  box-shadow: none;
+  transition: all 250ms ease-in-out;
+}
+.linkButton:hover,
+.linkButton:focus {
+  background-color: #a18c64;
+  box-shadow: 4px 4px 4px 0px rgba(130, 60, 43, 0.75);
+  -webkit-box-shadow: 4px 4px 4px 0px rgba(130, 60, 43, 0.75);
+  -moz-box-shadow: 4px 4px 4px 0px rgba(130, 60, 43, 0.75);
+}

@@ -1,5 +1,14 @@
 .mainTitle {
-  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
   text-transform: uppercase;
+}
+.titleLink {
+  text-decoration: none;
   color: #5f3d33;
+}
+
+.titleLink:hover,
+.titleLink:focus {
+  color: #e2d5cc;
 }
