@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoit_react_hw_06_phonebook=self.webpackChunkgoit_react_hw_06_phonebook||[]).push([[832],{1832:function(e,a,o){o.r(a),a.default={phoneIcon:"HomePage_phoneIcon__GyR9p",mainMassage:"HomePage_mainMassage__KegnW",additionalText:"HomePage_additionalText__hC4pX"}}}]);
+//# sourceMappingURL=832.614bc46f.chunk.js.map

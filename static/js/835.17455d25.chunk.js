@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoit_react_hw_06_phonebook=self.webpackChunkgoit_react_hw_06_phonebook||[]).push([[835],{4835:function(e,r,t){t.r(r),r.default={formWrapper:"RegisterPage_formWrapper__U4Tie",formTitle:"RegisterPage_formTitle__yl4p4",registerForm:"RegisterPage_registerForm__P2oKi",formInputLabel:"RegisterPage_formInputLabel__ProZ1",formInput:"RegisterPage_formInput__l4A8D",formSubmitBtn:"RegisterPage_formSubmitBtn__YXlqL"}}}]);
+//# sourceMappingURL=835.17455d25.chunk.js.map
