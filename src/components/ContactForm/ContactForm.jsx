@@ -13,7 +13,7 @@ import css from './ContactForm.module.css';
 
 export default function ContactForm() {
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
+  const [number, setNumber] = useState('');
 
   const { data: contacts } = useGetAllContactsQuery();
   const [addContact, { isLoading: isCreating }] = useAddContactMutation();
@@ -26,12 +26,12 @@ export default function ContactForm() {
   };
 
   const onPhoneChange = evt => {
-    setPhone(evt.currentTarget.value);
+    setNumber(evt.currentTarget.value);
   };
 
   const formReset = () => {
     setName('');
-    setPhone('');
+    setNumber('');
   };
 
   const onContactFormSubmit = async evt => {
@@ -41,21 +41,21 @@ export default function ContactForm() {
       contacts.find(
         contact =>
           contact.name.toLowerCase() === name.toLowerCase() &&
-          contact.phone === phone
+          contact.number === number
       )
     ) {
       showInfoMessage('This contact is already in your phonebook');
       return;
     }
 
-    if (contacts.find(contact => contact.phone === phone)) {
+    if (contacts.find(contact => contact.number === number)) {
       showInfoMessage('This phone number is already in your phonebook');
       return;
     }
 
     const newContact = {
       name: name,
-      phone: phone,
+      number: number,
     };
 
     try {
@@ -96,7 +96,7 @@ export default function ContactForm() {
             placeholder="Type number here"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-            value={phone}
+            value={number}
             onChange={onPhoneChange}
             id={phoneInputId}
             required

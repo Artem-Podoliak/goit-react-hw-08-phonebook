@@ -7,7 +7,7 @@ import {
 } from '../../utils/notifications';
 import css from './ContactItem.module.css';
 
-export default function ContactItem({ id, name, phone }) {
+export default function ContactItem({ id, name, number }) {
   const [deleteContact] = useDeleteContactMutation();
 
   const onContactDelete = async (contactId, contactName) => {
@@ -23,12 +23,14 @@ export default function ContactItem({ id, name, phone }) {
       );
     }
   };
+  console.log(number);
   return (
     <div className={css.contactItemWrapper}>
       <p className={css.contactItemName}>{name}</p>
-      <a className={css.contactItemNum} href={`tel:${phone}`}>
-        {phone}
+      <a className={css.contactItemNum} href={`tel:${number}`}>
+        {number}
       </a>
+
       <button
         className={css.deleteBtn}
         type="button"

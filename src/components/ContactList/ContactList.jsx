@@ -31,7 +31,7 @@ export default function ContactList() {
         .filter(
           contact =>
             contact.name.toLowerCase().includes(normalizedFilter) ||
-            contact.phone.includes(normalizedFilter)
+            contact.number.includes(normalizedFilter)
         )
         .sort(sortContactsByName);
     },
@@ -48,9 +48,9 @@ export default function ContactList() {
       </p>
       <ul className={css.phonebookList}>
         {visibleContacts.length ? (
-          visibleContacts.map(({ id, name, phone }) => (
+          visibleContacts.map(({ id, name, number }) => (
             <li className={css.listElement} key={id}>
-              <ContactItem id={id} name={name} phone={phone} />
+              <ContactItem id={id} name={name} number={number} />
             </li>
           ))
         ) : (
